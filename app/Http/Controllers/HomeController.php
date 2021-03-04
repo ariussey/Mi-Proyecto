@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function __invoke(){
         
-        $noticias = Noticia::where('status', '2')->latest('id')->get()->take(8);
+        $noticias = Noticia::where('status', '2')->latest('id')->get()->take(4);
         
         return view('welcome', compact('noticias'));
     }

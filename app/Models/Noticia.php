@@ -16,6 +16,15 @@ class Noticia extends Model
         return "slug";
     }
 
+    //Query Scopes
+    public function scopeCategory($query, $category_id){
+
+        if($category_id){
+            return $query->where('category_id', $category_id);
+        }
+
+    }
+
     //Relación uno a muchos INVERSA
 
     public function user(){

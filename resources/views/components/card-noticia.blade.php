@@ -1,14 +1,14 @@
 @props(['noticia'])
 
-<article class="mb-8 bg-white shadow-lg rounded-lg overflow-hidden">
+<article class="card mb-8">
     @if ($noticia->image)
         <img class="w-full h-72 object-cover object-center" src="{{Storage::url($noticia->image->url)}}" alt="">
     @else
         <img class="w-full h-72 object-cover object-center" src="https://cdn.pixabay.com/photo/2019/03/15/09/49/woman-4056684_960_720.jpg" alt="">
     @endif
     
-    <div class="px-6 py-4">
-        <h1 class="font-bold text-xl mb-2">
+    <div class="card-body">
+        <h1 class="card-title">
             <a href="{{route('noticias.show', $noticia)}}">{{$noticia->title}}</a>
         </h1>
         <div class="text-gray-700 text-base">

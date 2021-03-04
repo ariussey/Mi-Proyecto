@@ -1,16 +1,26 @@
 @php
     $nav_links = [
         [
-            'name' => 'Home',
+            'name' => 'Inicio',
             'route' => route('home'),
-            'active' => request()->routeIs('home')
+            'active' => request()->routeIs('home'),
+        ],
+        [
+            'name' => 'Noticias',
+            'route' => route('noticias.index'),
+            'active' => request()->routeIs('noticias.index'),
+        ],
+        [
+            'name' => 'Aula Virtual',
+            'route' => 'https://esar.edu.pe/aulavirtual',
+            'active' => request()->routeIs('aulavirtual'),
         ],
     ];
 @endphp
 
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100 shadow">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -23,7 +33,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @foreach ($nav_links as $nav_link)
-                        <x-jet-nav-link href="{{ $nav_link['name'] }}" :active="$nav_link['active']">
+                        <x-jet-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
                             {{ $nav_link['name'] }}
                         </x-jet-nav-link>
                     @endforeach
@@ -138,8 +148,8 @@
                             </x-slot>
                         </x-jet-dropdown>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 btn btn-gray">Iniciar sesión</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 btn btn-red">Registrarse</a>
                     @endauth
                 </div>
             </div>
@@ -244,7 +254,7 @@
         @else
         <div class="py-1 border-t border-gray-200">
             <x-jet-responsive-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
-                Ingresar
+                    Ingresar
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
                 Registrate

@@ -10,7 +10,7 @@
                     <input class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
                     type="search" name="search" placeholder="Search">
                     
-                    <button type="submit" href="#" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded absolute right-0 top-0 mt-2">
+                    <button type="submit" href="#" class="btn btn-green absolute right-0 top-0 mt-2">
                         Buscar
                     </button>
                     
@@ -95,19 +95,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             @foreach ($noticias as $noticia)
             
-                <article class="bg-white shadow-lg rounded overflow-hidden">
-                    <img class="h-36 w-full object-cover" src="{{Storage::url($noticia->image->url)}}" alt="">
-
-                    <div class="px-6 py-4">
-                        <h1 class="text-xl text-gray-700 mb-2 leading-6">{{Str::limit($noticia->title, 30)}}</h1>
-                        <p class="text-gray-500 text-sm mb-2">Categoría: {{$noticia->category->name}}</p>
-                        
-                        <a  href="{{route('noticias.show', $noticia)}}" class="w-full block text-center mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-2 rounded">
-                            Ver noticia completa
-                        </a    >
-
-                    </div>
-                </article>
+                <x-noticia-card :noticia="$noticia"/>
 
             @endforeach
         </div>
