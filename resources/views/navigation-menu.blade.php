@@ -12,7 +12,7 @@
         ],
         [
             'name' => 'Aula Virtual',
-            'route' => 'https://esar.edu.pe/aulavirtual',
+            'route' => 'https://aulavirtual.esar.edu.pe',
             'active' => request()->routeIs('aulavirtual'),
         ],
     ];
