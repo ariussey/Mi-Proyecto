@@ -15,6 +15,11 @@
             'route' => 'https://aulavirtual.esar.edu.pe',
             'active' => request()->routeIs('aulavirtual'),
         ],
+        [
+            'name' => 'Aula Virtual 2',
+            'route' => 'https://aulavirtual.esar.edu.pe',
+            'active' => request()->routeIs('aulavirtual'),
+        ],
     ];
 @endphp
 
