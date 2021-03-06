@@ -3,30 +3,28 @@
         [
             'name' => 'Inicio',
             'route' => route('home'),
+            'icono' => 'fas fa-home',
             'active' => request()->routeIs('home'),
         ],
         [
             'name' => 'Noticias',
             'route' => route('noticias.index'),
+            'icono' => 'fas fa-newspaper',
             'active' => request()->routeIs('noticias.index'),
         ],
         [
             'name' => 'Aula Virtual',
             'route' => 'https://aulavirtual.esar.edu.pe',
-            'active' => request()->routeIs('aulavirtual'),
-        ],
-        [
-            'name' => 'Aula Virtual 2',
-            'route' => 'https://aulavirtual.esar.edu.pe',
+            'icono' => 'fas fa-desktop',
             'active' => request()->routeIs('aulavirtual'),
         ],
     ];
 @endphp
 
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 shadow">
+<nav x-data="{ open: false }" class="bg-white">
     <!-- Primary Navigation Menu -->
     <div class="container">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-16 my-2">
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
@@ -36,13 +34,13 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @foreach ($nav_links as $nav_link)
                         <x-jet-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
                             {{ $nav_link['name'] }}
                         </x-jet-nav-link>
                     @endforeach
-                </div>
+                </div> --}}
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -154,8 +152,9 @@
                         </x-jet-dropdown>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 btn btn-gray">Iniciar sesión</a>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 btn btn-red">Registrarse</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 btn btn-green">Registrarse</a>
                     @endauth
+                    
                 </div>
             </div>
 
@@ -170,12 +169,29 @@
             </div>
         </div>
     </div>
-
+    <header class="bg-white shadow border-t border-gray-200">
+        <div class="container">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{-- {{ __('Dashboard xd ') }} --}}
+                <div class="flex">
+                    <!-- Navigation Links -->
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 md:ml-0 sm:flex">
+                        @foreach ($nav_links as $nav_link)
+                            <x-jet-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
+                                <i class="fa-fw {{ $nav_link['icono'] }} mr-2"></i>
+                                {{ $nav_link['name'] }}
+                            </x-jet-nav-link>
+                        @endforeach
+                    </div>
+                </div>
+            </h2>
+        </div>
+    </header>
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             @foreach ($nav_links as $nav_link)
-                <x-jet-responsive-nav-link href="{{ $nav_link['name'] }}" :active="$nav_link['active']">
+                <x-jet-responsive-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
                     {{ $nav_link['name'] }}
                 </x-jet-responsive-nav-link>
             @endforeach
@@ -266,6 +282,7 @@
             </x-jet-responsive-nav-link>
         </div>
         @endauth
-        
+
+
     </div>
 </nav>
