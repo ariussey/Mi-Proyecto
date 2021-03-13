@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\NoticiaController;
+use App\Http\Controllers\Admin\Portada_categoriaController;
+use App\Http\Controllers\Admin\PortadaController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
@@ -21,5 +23,11 @@ Route::resource('tags', TagController::class)->names('admin.tags');
 Route::resource('services', ServiceController::class)->names('admin.services');
 
 Route::resource('noticias', NoticiaController::class)->names('admin.noticias');
+
+Route::resource('portadas/categorias', Portada_categoriaController::class)->names('admin.portadas.categorias');
+
+Route::resource('portadas', PortadaController::class)->names('admin.portadas');
+
+
 
 Route::resource('administrador', administradorController::class)->names('admin.administrador');

@@ -88,4 +88,8 @@ class User extends Authenticatable
         return $this->hasMany(Infoweb::class);
     }
 
+    public function portadas(){
+        return $this->hasMany(Portada::class);
+    }
+
 }

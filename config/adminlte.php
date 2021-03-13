@@ -272,6 +272,14 @@ return [
             'active' => ['admin/services*'],
             'can'   => 'admin.services.index',
         ],
+        ['header' => 'OPCIONES DE LA WEB'],
+        [
+            'text' => 'Lista de Portadas',
+            'route'  => 'admin.portadas.index',
+            'icon' => 'fa-fw fas fa-image',
+            'active' => ['admin/portadas*'],
+            'can'   => 'admin.portadas.index',
+        ],
         ['header' => 'OPCIONES DE NOTICIAS'],
         [
             'text' => 'Lista de Noticias',
@@ -287,6 +295,7 @@ return [
             'active' => ['admin/noticias/create'],
             'can'   => 'admin.noticias.create',
         ],
+        
         // [
         //     'text'    => 'multilevel',
         //     'icon'    => 'fas fa-fw fa-share',

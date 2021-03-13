@@ -45,5 +45,10 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'admin.services.edit'])->syncRoles([$role1]);
         Permission::create(['name' => 'admin.services.destroy'])->syncRoles([$role1]);
 
+        Permission::create(['name' => 'admin.portadas.index'])->syncRoles([$role1]);
+        Permission::create(['name' => 'admin.portadas.create'])->syncRoles([$role1]);
+        Permission::create(['name' => 'admin.portadas.edit'])->syncRoles([$role1]);
+        Permission::create(['name' => 'admin.portadas.destroy'])->syncRoles([$role1]);
+
     }
 }

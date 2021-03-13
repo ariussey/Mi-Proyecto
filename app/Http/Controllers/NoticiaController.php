@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Noticia;
+use App\Models\Portada;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
@@ -11,8 +12,9 @@ class NoticiaController extends Controller
 {
     public function index(){
         $noticias = Noticia::where('status', 2)->latest('id')->paginate(8);
+        $portadas = Portada::where('status', 2)->get();
 
-        return view('noticias.index', compact('noticias'));
+        return view('noticias.index', compact('noticias', 'portadas'));
     }
 
     public function show(Noticia $noticia){

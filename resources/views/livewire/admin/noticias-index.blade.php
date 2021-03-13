@@ -9,7 +9,12 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nombre</th>
+                        <th>Título</th>
+                        <th>Subtítulo</th>
+                        <th>Descripción</th>
+                        <th>Creador</th>
+                        <th>Imagen</th>
+                        <th>Estado</th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>
@@ -19,6 +24,11 @@
                         <tr>
                             <td>{{$noticia->id}}</td>
                             <td>{{$noticia->title}}</td>
+                            <td>{{$noticia->subtitle}}</td>
+                            <td>{{$noticia->description}}</td>
+                            <td>{{$noticia->user->name}}</td>
+                            <td><img width="100px" src="@if ($noticia->image) {{Storage::url($noticia->image->url)}} @else https://esar.edu.pe/img/home/pexels-sam-lion-6001670.jpg @endif" alt=""></td>
+                            <td>{{$noticia->status}}</td>
                             <td width="10px"><a class="btn btn-primary btn-sm" href="{{route('admin.noticias.edit', $noticia)}}">Editar</a></td>
                             <td width="10px">
                                 <form action="{{route('admin.noticias.destroy', $noticia)}}" method="POST">

@@ -22,9 +22,13 @@ class NoticiasIndex extends Component
 
     public function render()
     {
+        // SOLO PARA VER LAS NOTICIAS DEL USUARIO CREADOR
+        //  $noticias = Noticia::where('user_id', auth()->user()->id)
+        //                 ->where('title', 'LIKE', '%' . $this->search . '%')
+        //                 ->latest('id')
+        //                 ->paginate();
 
-        $noticias = Noticia::where('user_id', auth()->user()->id)
-                        ->where('title', 'LIKE', '%' . $this->search . '%')
+        $noticias = Noticia::where('title', 'LIKE', '%' . $this->search . '%')
                         ->latest('id')
                         ->paginate();
 

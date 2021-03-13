@@ -7,6 +7,7 @@ use App\Models\Infoweb;
 use App\Models\Navbar;
 use App\Models\Noticia;
 use App\Models\Page;
+use App\Models\Portada_categoria;
 use App\Models\Service;
 use App\Models\Slide;
 use App\Models\Tag;
@@ -25,9 +26,11 @@ class DatabaseSeeder extends Seeder
     {
         Storage::deleteDirectory('noticias');
         Storage::deleteDirectory('slides');
+        Storage::deleteDirectory('portadas');
 
         Storage::makeDirectory('noticias');
         Storage::makeDirectory('slides');
+        Storage::makeDirectory('portadas');
         
         $this->call(RoleSeeder::class);
         
@@ -41,9 +44,13 @@ class DatabaseSeeder extends Seeder
         Navbar::factory(5)->create();
         Page::factory(5)->create();
 
+        Portada_categoria::factory(2)->create();
+
         $this->call(SlideSeeder::class);
 
         $this->call(NoticiaSeeder::class);
+
+        $this->call(PortadaSeeder::class);
         
     }
 }

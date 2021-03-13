@@ -10,7 +10,7 @@
             'name' => 'Noticias',
             'route' => route('noticias.index'),
             'icono' => 'fas fa-newspaper',
-            'active' => request()->routeIs('noticias.index'),
+            'active' => request()->routeIs('noticias.*'),
         ],
         [
             'name' => 'Aula Virtual',

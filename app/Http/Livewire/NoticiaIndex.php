@@ -23,7 +23,7 @@ class NoticiaIndex extends Component
         $tags = Tag::all();
         $noticias = Noticia::where('status', 2)
                             ->category($this->category_id)
-                            // ->where('tag_id', $this->tag_id)
+                            //->where('tag_id', $this->tag_id)->join('tags')
                             ->latest('id')->paginate(4);
 
         return view('livewire.noticia-index', compact('noticias', 'categories', 'tags'));
