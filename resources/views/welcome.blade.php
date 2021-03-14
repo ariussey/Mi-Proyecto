@@ -69,17 +69,43 @@
                 </article>
 
             @endforeach --}}
-
+            <style>
+                .card-service{
+                    margin-bottom: 1rem;
+                    transition: 0ms;
+                }
+                .card-service :hover{
+                    margin-top: -1.5rem;
+                    box-shadow: 0 2.25rem 1.5rem -1.5rem rgba(33,37,41,.3),0 0 1.5rem .5rem rgba(33,37,41,.05);
+                    transition: .20s all;
+                    
+                }
+                .reset{
+                    margin-bottom: 0;
+                    transition: .20s;
+                }
+                .reset :hover{
+                    margin-top: 0;
+                    box-shadow: none;
+                }
+                
+            </style>  
             @foreach ($services as $service)
-                <article class="bg-white w-full h-40 shadow text-center rounded-md">
-                    <div class="w-full h-full px-8 flex flex-col justify-center">
-                        <a href="" class="text-{{$service->color}}-500 hover:text-{{$service->color}}-700">
-                            <i class="{{$service->icono}} fa-3x"></i>
-                            <h1 class="text-2xl font-bold leading-8">{{$service->name}}</h1>
-                            <p class="text-sm text-gray-500">{{$service->description}}</p>
-                        </a>
-                    </div>
-                </article>
+            <a href="" class="text-gray-600 hover:text-{{$service->color}}-500 card-service">
+                <div class="bg-white w-full h-40 p-4 shadow text-center rounded-md border-b-8 border-{{$service->color}}-500 reset">
+                    
+                        {{-- <div class="w-full h-full px-8 flex flex-col justify-center"> --}}
+                                  
+                            <i class="{{$service->icono}} fa-3x reset"></i>
+                            <h1 class="text-2xl font-bold leading-8 reset">{{$service->name}}</h1>
+                            <hr>
+                            <p class="text-sm text-gray-500 reset">{{$service->description}}</p>
+                        
+                        {{-- </div> --}}
+                    
+                        </div>
+            </a>
+            
             @endforeach
             {{-- <article>
                 <figure>    

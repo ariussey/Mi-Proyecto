@@ -29,6 +29,7 @@ class ServiceFactory extends Factory
             'name' => $name,
             'slug' => Str::slug($name),
             'description' => $this->faker->text(100),
+            'url' => $this->faker->word('10'),
             'icono' => $this->faker->randomElement(['fas fa-chalkboard-teacher','fas fa-address-card','fas fa-headset','fas fa-video']),
             'color' => $this->faker->randomElement(['red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink']),
             'status' => $this->faker->randomElement([1,2])

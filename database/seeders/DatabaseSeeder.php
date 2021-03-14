@@ -36,13 +36,13 @@ class DatabaseSeeder extends Seeder
         
         // \App\Models\User::factory(10)->create();
         $this->call(UserSeeder::class);
-        Category::factory(5)->create();
-        Tag::factory(15)->create();
+        Category::factory(3)->create();
+        Tag::factory(4)->create();
 
-        Service::factory(16)->create();
+        Service::factory(4)->create();
         Infoweb::factory(1)->create();
-        Navbar::factory(5)->create();
-        Page::factory(5)->create();
+        Navbar::factory(4)->create();
+        Page::factory(4)->create();
 
         Portada_categoria::factory(2)->create();
 

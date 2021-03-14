@@ -15,7 +15,7 @@ class NoticiaSeeder extends Seeder
      */
     public function run()
     {
-        $noticias = Noticia::factory(5)->create();
+        $noticias = Noticia::factory(2)->create();
 
         foreach($noticias as $noticia){
             Image::factory(1)->create([

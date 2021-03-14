@@ -92,7 +92,8 @@ class NoticiaController extends Controller
      */
     public function edit(Noticia $noticia)
     {
-        $this->authorize('author', $noticia);
+        //Solo puede editar el creador
+        //$this->authorize('author', $noticia);
 
         $tags = Tag::all();
 
@@ -110,7 +111,8 @@ class NoticiaController extends Controller
      */
     public function update(NoticiaRequest $request, Noticia $noticia)
     {
-        $this->authorize('author', $noticia);
+        //Solo puede editar el creador
+        //$this->authorize('author', $noticia);
 
         $noticia->update($request->all());
 

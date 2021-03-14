@@ -18,6 +18,7 @@ class CreateServicesTable extends Migration
 
             $table->string('name');
             $table->string('slug');
+            $table->string('url');
             $table->text('description');
             $table->string('icono');
             $table->string('color');
