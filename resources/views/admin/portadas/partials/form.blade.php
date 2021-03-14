@@ -49,7 +49,7 @@
 </div>
 
 <div class="row mb-3">
-    <div class="col">
+    <div class="col-12 col-md-6">
         <div class="image-wrapper">
             @isset ($portada->image)
                 <img id="picture" src="{{Storage::url($portada->image->url)}}" alt="">
@@ -57,29 +57,39 @@
                 <img id="picture" src="https://esar.edu.pe/img/home/pexels-sam-lion-6001670.jpg" alt="">
             @endisset
         </div>
+        @isset($portada)
+            <div class="col-12 m-2 rounded" style="background-color: {{$portada->color}}; display:inline-grid">
+                <p class="text-white m-0">{{$portada->title}}</p>
+                <small class="text-white">{!!$portada->description!!}</small>
+                @php
+                    $padding = '115';
+                @endphp
+            </div>
+        @endisset
     </div>
-    <div class="col">
+    <div class="col-12 col-md-5 ml-md-2">
         <div class="form-group">
             {!! Form::label('file', 'Imagen de portada') !!}
             {!! Form::file('file', ['class' => 'form-control-file', 'accept' => 'image/*']) !!}
             <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde accusantium corporis ad magnam. Voluptate odit modi laboriosam ex provident, harum, rem error assumenda quia, cumque aut unde vel obcaecati accusantium!</p>
+            <p>Seleccione una imagen en formato PNG O JPG, el peso de la imagen debe ser menor a 1MB</p>
         </div>
 
         @error('file')
             <small class="text-danger">{{$message}}</small>
         @enderror
-
+        <div class="form-group" style="padding-top: 0 px; position: relative;">
+            {!! Form::label('color', 'Color') !!}
+            {!! Form::text('color', null, ['class' => 'form-control colorpicker col-6']) !!}
+            {{-- @isset($portada->color)
+            <p class="col-6 px-4" style="background-color: {{$portada->color}}" id="demo"></p>
+            @else
+            <p class="col-6 px-4" style="background-color: #ffffff" id="demo">Sin Color</p>
+            @endif --}}
+        </div>
     </div>
 </div>
 
-
-<div class="form-group">
-    {!! Form::label('color', 'Color') !!}
-    {!! Form::text('color', null, ['class' => 'form-control colorpicker col-6']) !!}
-    @isset($portada->color)
-    <p class="col-6 px-4" style="background-color: {{$portada->color}}" id="demo">sdfsd</p>
-    @else
-    <p class="col-6 px-4" style="background-color: #ffffff" id="demo">Sin Color</p>
-    @endif
-</div>
+@php
+        $padding = '0';
+    @endphp

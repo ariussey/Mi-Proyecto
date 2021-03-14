@@ -21,7 +21,7 @@
             <a class="btn btn-success btn-sm" href="{{route('admin.portadas.categorias.create')}}">Agregar Categoría</a>
         </div>
         <div class="card-body">
-            <table class="table table-striped">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>Id</th>

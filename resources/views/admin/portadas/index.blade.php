@@ -22,7 +22,7 @@
             <a class="btn btn-primary btn-sm" href="{{route('admin.portadas.categorias.index')}}">Gestión Categoría</a>
         </div>
         <div class="card-body">
-            <table class="table table-striped">
+            <table class="table table-hover table-responsive table-sm">
                 <thead>
                     <tr>
                         <th>ID</th>

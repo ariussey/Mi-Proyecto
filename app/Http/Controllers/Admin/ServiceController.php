@@ -41,6 +41,7 @@ class ServiceController extends Controller
             'name' => 'required',
             'slug' => 'required|unique:services',
             'description' => 'required',
+            'url' => 'required',
             'icono' => 'required',
             'color' => 'required',
             'status' => 'required'
@@ -87,6 +88,7 @@ class ServiceController extends Controller
             'name' => 'required',
             'slug' => "required|unique:services,slug,$service->id",
             'description' => 'required',
+            'url' => 'required',
             'icono' => 'required',
             'color' => 'required',
             'status' => 'required'

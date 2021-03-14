@@ -27,7 +27,8 @@
 
     <style>
         .image-wrapper{
-            position: relative;
+            /* position: relative; */
+            position: initial;
             padding-bottom: 56.25%;
         }
 

@@ -25,7 +25,7 @@
                     {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre del servicio']) !!}
                 
                     @error('name')
-                        <span class="text-danger">{{$message}}</span>
+                        <small class="text-danger">{{$message}}</small>
                     @enderror
 
                 </div>
@@ -35,7 +35,7 @@
                     {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el slug del servicio', 'readonly']) !!}
                 
                     @error('slug')
-                        <span class="text-danger">{{$message}}</span>
+                        <small class="text-danger">{{$message}}</small>
                     @enderror
                 
                 </div>
@@ -45,9 +45,18 @@
                     {!! Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'Ingrese la descripción del servicio']) !!}
     
                     @error('description')
-                        <span class="text-danger">{{$message}}</span>
+                        <small class="text-danger">{{$message}}</small>
                     @enderror
                 
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('url', 'URL') !!}
+                    {!! Form::text('url', null, ['class' => 'form-control']) !!}
+
+                    @error('url')
+                        <small class="text-danger">{{$message}}</small>
+                    @enderror
                 </div>
 
                 <div class="form-group">
@@ -55,7 +64,7 @@
                     {!! Form::text('icono', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el icono del servicio']) !!}
                 
                     @error('icono')
-                        <span class="text-danger">{{$message}}</span>
+                        <small class="text-danger">{{$message}}</small>
                     @enderror
                 
                 </div>
@@ -65,7 +74,7 @@
                     {!! Form::text('color', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el color del icono']) !!}
                 
                     @error('color')
-                        <span class="text-danger">{{$message}}</span>
+                        <small class="text-danger">{{$message}}</small>
                     @enderror
 
                 </div>
@@ -75,7 +84,7 @@
                     {!! Form::text('status', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el estado del icono']) !!}
                 
                     @error('status')
-                        <span class="text-danger">{{$message}}</span>
+                        <small class="text-danger">{{$message}}</small>
                     @enderror
 
                 </div>

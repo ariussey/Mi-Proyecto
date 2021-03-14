@@ -23,6 +23,10 @@ Route::get('tag/{tag}', [NoticiaController::class, 'tag'])->name('noticias.tag')
 
 Route::get('services', [ServiceController::class, 'index'])->name('services.index');
 
+// Route::get('nosotros', [NosotrosControll] {
+    
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

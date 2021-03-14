@@ -15,7 +15,7 @@ class SlideSeeder extends Seeder
      */
     public function run()
     {
-        $slides = Slide::factory(5)->create();
+        $slides = Slide::factory(3)->create();
 
         foreach($slides as $slide){
             Image::factory(1)->create([

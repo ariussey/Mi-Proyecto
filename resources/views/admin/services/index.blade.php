@@ -22,12 +22,13 @@
         </div>
 
         <div class="card-body">
-            <table class="table table-striped">
+            <table class="table table-hover table-responsive-sm">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
+                        <th>Url</th>
                         <th>Icono</th>
                         <th>Color</th>
                         <th>Estado</th>
@@ -41,6 +42,7 @@
                             <td>{{$service->id}}</td>
                             <td>{{$service->name}}</td>
                             <td>{{$service->description}}</td>
+                            <td>{{$service->url}}</td>
                             <td><i class="{{$service->icono}} text-{{$service->color}}"></i></td>
                             <td><span class="bg-{{$service->color}} rounded-lg">&nbsp; &nbsp; &nbsp;</span></td>
                             <td>{{$service->status}}</td>

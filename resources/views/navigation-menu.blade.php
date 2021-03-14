@@ -7,6 +7,12 @@
             'active' => request()->routeIs('home'),
         ],
         [
+            'name' => 'Nosotros',
+            'route' => route('home'),
+            'icono' => 'fas fa-hotel',
+            'active' => request()->routeIs('home'),
+        ],
+        [
             'name' => 'Noticias',
             'route' => route('noticias.index'),
             'icono' => 'fas fa-newspaper',

@@ -74,7 +74,7 @@
 </div>
 
 <div class="row mb-3">
-    <div class="col">
+    <div class="col-12 col-md-6">
         <div class="image-wrapper">
             @isset ($noticia->image)
                 <img id="picture" src="{{Storage::url($noticia->image->url)}}" alt="">
@@ -83,12 +83,12 @@
             @endisset
         </div>
     </div>
-    <div class="col">
+    <div class="col-12 col-md-6">
         <div class="form-group">
             {!! Form::label('file', 'Imagen de la portada de la noticia') !!}
             {!! Form::file('file', ['class' => 'form-control-file', 'accept' => 'image/*']) !!}
             <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde accusantium corporis ad magnam. Voluptate odit modi laboriosam ex provident, harum, rem error assumenda quia, cumque aut unde vel obcaecati accusantium!</p>
+            <p>Seleccione una imagen en formato PNG O JPG, el peso de la imagen debe ser menor a 1MB</p>
         </div>
 
         @error('file')

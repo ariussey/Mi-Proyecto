@@ -42,6 +42,15 @@
                 </div>
 
                 <div class="form-group">
+                    {!! Form::label('url', 'URL') !!}
+                    {!! Form::text('url', null, ['class' => 'form-control']) !!}
+
+                    @error('url')
+                        <small class="text-danger">{{$message}}</small>
+                    @enderror
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('icono', 'Icono') !!}
                     {!! Form::text('icono', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el icono del servicio']) !!}
                 
