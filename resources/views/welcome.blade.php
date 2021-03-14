@@ -49,8 +49,8 @@
         </div>
     </section> --}}
 
-    <section class="mt-24">
-        <h1 class="text-gray-600 text-center text-3xl mb-6">SERVICIOS</h1>
+    <section class="services">
+        {{-- <h1 class="text-gray-600 text-center text-3xl mb-6">SERVICIOS</h1> --}}
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             
@@ -70,6 +70,9 @@
 
             @endforeach --}}
             <style>
+                .services{
+                    margin-top: -95px;
+                }
                 .card-service{
                     margin-bottom: 1rem;
                     transition: 0ms;
@@ -171,8 +174,8 @@
     </section>
 
     <section class="my-24">
-        <h1 class="text-center text-3xl text-gray-600">ULTIMAS NOTICIAS</h1>
-        <p class="text-center text-gray-500 text-sm mb-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquid, soluta sed nostrum unde quaerat sit nihil eaque provident adipisci ad nesciunt architecto.</p>
+        <h1 class="text-center text-3xl text-gray-600 my-8">ULTIMAS NOTICIAS</h1><br>
+        {{-- <p class="text-center text-gray-500 text-sm mb-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquid, soluta sed nostrum unde quaerat sit nihil eaque provident adipisci ad nesciunt architecto.</p> --}}
     
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             @foreach ($noticias as $noticia)
