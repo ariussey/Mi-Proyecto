@@ -49,7 +49,7 @@
         </div>
     </section> --}}
 
-    <section class="services">
+    <section class="services degrade">
         {{-- <h1 class="text-gray-600 text-center text-3xl mb-6">SERVICIOS</h1> --}}
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
@@ -90,6 +90,9 @@
                 .reset :hover{
                     margin-top: 0;
                     box-shadow: none;
+                }
+                .degrade{
+                    background: linear-gradient(180deg,#ffffff00,#afe4ec,#10b981);
                 }
                 
             </style>  
@@ -162,7 +165,7 @@
     </section>
 
 
-    <section class="mt-24 bg-gray-700 py-12">
+    <section class="bg-gray-700 py-12">
         <h1 class="text-center text-white text-3xl">¿No sabes como ingresar al Aula Virtual?</h1>
         <p class="text-center text-white">Lorem ipsum dolor sit, amet doloribus placeat, sint molestias quos velit ipsam vel exercitationem quam facilis culpa quidem ut minus vitae?</p>
         
