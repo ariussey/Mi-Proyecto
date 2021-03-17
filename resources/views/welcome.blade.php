@@ -97,7 +97,7 @@
                 
             </style>
             @foreach ($services as $service)
-            <a href="" class="text-gray-600 hover:text-{{$service->color}}-500 card-service">
+            <a target="_blank" href="{{$service->url}}" class="text-gray-600 hover:text-{{$service->color}}-500 card-service">
                 <div class="bg-white w-full h-40 p-4 shadow text-center rounded-md border-b-8 border-{{$service->color}}-500 reset">
                     
                         {{-- <div class="w-full h-full px-8 flex flex-col justify-center"> --}}

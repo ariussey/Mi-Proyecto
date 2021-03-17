@@ -4,7 +4,7 @@
             @foreach ($services as $service)
                 <article class="bg-white w-full h-40 shadow text-center rounded-md">
                     <div class="w-full h-full px-8 flex flex-col justify-center">
-                        <a href="">
+                        <a target="_blank" href="{{$service->url}}">
                             <i class="{{$service->icono}} fa-3x text-{{$service->color}}-500"></i>
                             <h1 class="text-2xl font-bold leading-8 text-{{$service->color}}-500">{{$service->name}}</h1>
                             <p class="text-sm text-gray-500 text-{{$service->color}}-500">{{$service->description}}</p>
