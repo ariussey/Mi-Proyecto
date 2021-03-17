@@ -92,4 +92,8 @@ class User extends Authenticatable
         return $this->hasMany(Portada::class);
     }
 
+    public function nosotros(){
+        return $this->hasMany(Nosotro::class);
+    }
+
 }

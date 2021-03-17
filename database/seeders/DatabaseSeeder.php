@@ -27,30 +27,38 @@ class DatabaseSeeder extends Seeder
         Storage::deleteDirectory('noticias');
         Storage::deleteDirectory('slides');
         Storage::deleteDirectory('portadas');
+        Storage::deleteDirectory('nosotros');
 
         Storage::makeDirectory('noticias');
         Storage::makeDirectory('slides');
         Storage::makeDirectory('portadas');
+        Storage::makeDirectory('nosotros');
         
         $this->call(RoleSeeder::class);
         
         // \App\Models\User::factory(10)->create();
         $this->call(UserSeeder::class);
-        Category::factory(3)->create();
-        Tag::factory(4)->create();
+        //Category::factory(1)->create();
+        $this->call(CategoriaSeeder::class);
+        //Tag::factory()->create();
+        $this->call(TagSeeder::class);
 
-        Service::factory(4)->create();
+        //Service::factory(4)->create();
+        $this->call(ServiceSeeder::class);
         Infoweb::factory(1)->create();
         Navbar::factory(4)->create();
         Page::factory(4)->create();
 
-        Portada_categoria::factory(2)->create();
+        $this->call(PortadaCategoriaSeeder::class);
+        //Portada_categoria::factory(2)->create();
 
         $this->call(SlideSeeder::class);
 
         $this->call(NoticiaSeeder::class);
 
         $this->call(PortadaSeeder::class);
+
+        $this->call(NosotroSeeder::class);
         
     }
 }

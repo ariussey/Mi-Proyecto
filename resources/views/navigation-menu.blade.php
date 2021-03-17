@@ -8,9 +8,9 @@
         ],
         [
             'name' => 'Nosotros',
-            'route' => route('home'),
+            'route' => route('nosotros.index'),
             'icono' => 'fas fa-hotel',
-            'active' => request()->routeIs('home'),
+            'active' => request()->routeIs('nosotros.index'),
         ],
         [
             'name' => 'Noticias',

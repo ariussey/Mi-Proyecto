@@ -69,7 +69,7 @@
                 </article>
 
             @endforeach --}}
-            <style>
+            {{-- <style>
                 .services{
                     margin-top: -95px;
                 }
@@ -95,7 +95,7 @@
                     background: linear-gradient(180deg,#ffffff00,#afe4ec,#10b981);
                 }
                 
-            </style>  
+            </style>   --}}
             @foreach ($services as $service)
             <a href="" class="text-gray-600 hover:text-{{$service->color}}-500 card-service">
                 <div class="bg-white w-full h-40 p-4 shadow text-center rounded-md border-b-8 border-{{$service->color}}-500 reset">

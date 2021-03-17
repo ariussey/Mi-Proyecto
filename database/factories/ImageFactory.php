@@ -24,7 +24,14 @@ class ImageFactory extends Factory
         return [
             //'url' => 'noticias/'.$this->faker->image('public/storage/noticias', 640, 480, null, false)
 
-            'url' => 'portadas/'.$this->faker->image('public/storage/portadas', 640, 480, null, false)
+            //'url' => 'portadas/'.$this->faker->image('public/storage/portadas', 640, 480, null, false)
+            'url' => 'nosotros/'.$this->faker->image('public/storage/nosotros', 640, 480, null, false)
+        ];
+    }
+
+    public function nosotrosimg(){
+        return [
+            'url' => 'nosotros/'.$this->faker->image('public/storage/nosotros', 640, 480, null, false)
         ];
     }
 }

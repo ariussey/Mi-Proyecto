@@ -26,7 +26,7 @@
     {!! Form::label('portada_categoria_id', 'Categoría') !!}
     {!! Form::select('portada_categoria_id', $portada_categorias, null, ['class' => 'form-control']) !!}
 
-    @error('category_id')
+    @error('portada_categoria_id')
         <small class="text-danger">{{$message}}</small>
     @enderror
 
