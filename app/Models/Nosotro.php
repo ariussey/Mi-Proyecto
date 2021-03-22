@@ -14,6 +14,11 @@ class Nosotro extends Model
     const BORRADOR = 1;
     const PUBLICO = 2;
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     //Relacion uno a muchos inversa
     public function user(){
         return $this->belongsTo(User::class);

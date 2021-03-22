@@ -32721,6 +32721,55 @@ select {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  .sidebar{
+    margin-top: 3rem;
+    padding-left: 3rem;
+    position: absolute;
+  }
+}
+
+.sidebar{
+  display: inline;
+  margin-top: 3rem;
+  padding-left: 3rem;
+}
+
+.sidebar-link{
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+  border-left-width: 4px;
+  display: block;
+  font-weight: 500;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.sidebar-link:hover{
+  --tw-text-opacity: 1;
+  color: rgba(16, 185, 129, var(--tw-text-opacity));
+}
+
+.sidebar-link.active{
+  --tw-bg-opacity: 1;
+  background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(110, 231, 183, var(--tw-border-opacity));
+  border-left-width: 4px;
+  display: block;
+  font-weight: 600;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(16, 185, 129, var(--tw-text-opacity));
+}
+
+.degrade-nosotros{
+  background-image: linear-gradient(45deg,#10b981,#0d849e ,#4cc8ce);
 }
 
 .btn {

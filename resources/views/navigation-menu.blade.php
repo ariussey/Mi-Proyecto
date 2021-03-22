@@ -10,7 +10,7 @@
             'name' => 'Nosotros',
             'route' => route('nosotros.index'),
             'icono' => 'fas fa-hotel',
-            'active' => request()->routeIs('nosotros.index'),
+            'active' => request()->routeIs('nosotros.*'),
         ],
         [
             'name' => 'Noticias',

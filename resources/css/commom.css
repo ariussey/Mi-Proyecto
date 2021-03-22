@@ -25,4 +25,29 @@
     .container{
         @apply px-8;
     }
+
+    .sidebar{
+        @apply pl-12 mt-12 absolute;
+    }
+}
+
+.sidebar{
+    @apply pl-12 mt-12 inline;
+}
+
+.sidebar-link{
+    @apply px-8 font-medium py-1 block border-l-4 border-white;
+    
+}
+
+.sidebar-link:hover{
+    @apply text-green-500;
+}
+
+.sidebar-link.active{
+    @apply px-8 font-semibold py-1 block border-l-4 border-green-300 text-green-500 bg-green-50;
+}
+
+.degrade-nosotros{
+    background-image: linear-gradient(45deg,#10b981,#0d849e ,#4cc8ce);
 }

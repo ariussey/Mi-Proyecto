@@ -49,15 +49,15 @@ class NosotroSeeder extends Seeder
 
 
         Image::factory(1)->create([
-            'imageable_id' => 4,
+            'imageable_id' => 1,
             'imageable_type' => Nosotro::class
         ]);
         Image::factory(1)->create([
-            'imageable_id' => 5,
+            'imageable_id' => 2,
             'imageable_type' => Nosotro::class
         ]);
         Image::factory(1)->create([
-            'imageable_id' => 6,
+            'imageable_id' => 3,
             'imageable_type' => Nosotro::class
         ]);
 
