@@ -14,7 +14,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css"> 
+        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css">  --}}
 
         @livewireStyles
 
@@ -46,6 +46,6 @@
         @stack('modals')
 
         @livewireScripts
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        {{-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> --}}
     </body>
 </html>

@@ -24,6 +24,12 @@
             'icono' => 'fas fa-desktop',
             'active' => request()->routeIs('aulavirtual'),
         ],
+        [
+            'name' => 'Contáctanos',
+            'route' => route('contactanos.index'),
+            'icono' => 'fas fa-headset',
+            'active' => request()->routeIs('contactanos.index'),
+        ],
     ];
 @endphp
 

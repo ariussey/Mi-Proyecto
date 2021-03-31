@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NosotroController;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Livewire\Contactanos;
 
 Route::get('/', HomeController::class)->name('home');
 
@@ -25,6 +26,10 @@ Route::get('services', [ServiceController::class, 'index'])->name('services.inde
 
 Route::get('nosotros', [NosotroController::class, 'index'])->name('nosotros.index');
 Route::get('nosotros/{nosotro}', [NosotroController::class, 'show'])->name('nosotros.show');
+
+Route::get('contactanos', [Contactanos::class, 'index'])->name('contactanos.index');
+
+Route::post('contactanos', [Contactanos::class, 'store'])->name('contactanos.store');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

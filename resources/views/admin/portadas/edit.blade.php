@@ -59,17 +59,16 @@
     <script src="{{asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js')}}"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js"></script>
-    <script>
-        $(function () {
-          // Basic instantiation:
-          $('#color').colorpicker();
-          
-          // Example using an event, to change the color of the #demo div background:
-          $('#color').on('colorpickerChange', function(event) {
-            //$('#demo').css('background-color', event.color.toString());
-          });
+
+      <script type="text/javascript">
+        $('#color').css('background-color', $(color).val());
+        $('#color').css('color', $(color).val());
+        $('#color').colorpicker();
+        $('#color').on('colorpickerChange', function(event) {            
+        $('#color').css('background-color', event.color.toString());
+        $('#color').css('color', event.color.toString());    
         });
-      </script>
+    </script>
       {{-- <script>
         $(function() {
           $('#color').colorpicker({
