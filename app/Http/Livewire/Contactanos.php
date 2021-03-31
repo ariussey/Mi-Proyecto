@@ -34,7 +34,7 @@ class Contactanos extends Component
         ]);
         $correo = new ContactanosMailable($request->all());
 
-        Mail::to('angemar@esar.edu.pe')->send($correo);
+        Mail::to('angemar@esargatnau.onmicrosoft.com')->send($correo);
 
         return redirect()->route('contactanos.index')->with('info', 'El mensaje de envió correctacente');
     }
