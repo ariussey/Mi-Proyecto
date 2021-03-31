@@ -25,8 +25,7 @@
     <section class="pb-24">
     <h1 class="m-8 text-4xl text-center text-green-500">Contáctanos</h1>
         <div class="container">
-            <!-- component -->
- 
+            
             <!-- Container -->
             <div class="container mx-auto">
                 <div class="flex justify-center px-2 my-12">
