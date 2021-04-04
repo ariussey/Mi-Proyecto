@@ -20,6 +20,8 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
         
     </head>
     <body class="font-sans antialiased">
@@ -47,5 +49,14 @@
 
         @livewireScripts
         {{-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> --}}
+        <script>
+            Livewire.on('alerta', function(){
+                Swal.fire(
+                'Guardado!',
+                'El registro se agregó correctamente!',
+                'success'
+                )
+            })
+        </script>
     </body>
 </html>

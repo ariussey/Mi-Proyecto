@@ -96,4 +96,8 @@ class User extends Authenticatable
         return $this->hasMany(Nosotro::class);
     }
 
+    public function adminlte_image(){
+        return 'http://esar.test/img/home/logo-esar.png';
+    }
+
 }

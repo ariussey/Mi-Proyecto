@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\administradorController;
+use App\Http\Livewire\Admin\Intranet\Entidades\ShowEntidades;
 
 Route::get('', [HomeController::class,'index'])->name('admin.home');
 
@@ -27,6 +28,8 @@ Route::resource('noticias', NoticiaController::class)->names('admin.noticias');
 Route::resource('portadas/categorias', Portada_categoriaController::class)->names('admin.portadas.categorias');
 
 Route::resource('portadas', PortadaController::class)->names('admin.portadas');
+
+Route::get('intranet/entidades', [ShowEntidades::class, 'index'])->name('admin.intranet.entidades.index');
 
 
 

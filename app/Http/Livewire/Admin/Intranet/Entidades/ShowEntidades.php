@@ -1,0 +1,58 @@
+<?php
+
+namespace App\Http\Livewire\Admin\Intranet\Entidades;
+
+use App\Models\Entidade;
+use Livewire\Component;
+
+class ShowEntidades extends Component
+{
+    public $titulo;
+    public $descripcion;
+
+
+    public $buscador;
+    public $sort = "id";
+    public $direccion = "asc";
+
+    protected $listeners = ['render'];
+
+    // public function mount($data){
+    //     $this->titulo = $data['titulo'];
+    //     $this->descripcion = $data['descripcion'];
+    // }
+
+    public function render()
+    {
+        $entidades = Entidade::where('nombre', 'like', '%' . $this->buscador . '%')
+                            ->orwhere('id', 'like', '%' . $this->buscador . '%')
+                            ->orderBy($this->sort, $this->direccion)
+                            ->get();
+        return view('livewire.admin.intranet.entidades.show-entidades', compact('entidades'));
+    }
+
+    public function orden($sort){
+        if ($this->sort == $sort) {
+            if ($this->direccion == 'desc') {
+                $this->direccion = 'asc';
+            } else {
+                $this->direccion = 'desc';
+            }
+            
+        } else {
+            $this->sort = $sort;
+            $this->direccion = 'asc';
+        }
+        
+    }
+
+    public function index(){
+        return view('admin.intranet.entidades.index');
+    }
+
+    public function edit(Entidade $entidad){
+        $this->nombre = $entidad->nombre;
+        $this->estado = $entidad->estado;
+    }
+
+}

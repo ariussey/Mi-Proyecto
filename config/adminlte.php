@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => '',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => ' | Esar',
 
     /*
     |--------------------------------------------------------------------------
@@ -46,11 +46,12 @@ return [
     */
 
     'logo' => '<b>Esar</b>EDU',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    // 'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img' => 'img/home/logo-esar.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
-    'logo_img_xl' => null,
+    'logo_img_xl' => 'img/home/esar-logo.png',
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'Esar',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,9 +66,9 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
+    'usermenu_header' => true,
+    'usermenu_header_class' => 'bg-green',
+    'usermenu_image' => true,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
 
@@ -84,10 +85,10 @@ return [
     */
 
     'layout_topnav' => null,
-    'layout_boxed' => null,
+    'layout_boxed' => false,
     'layout_fixed_sidebar' => true,
-    'layout_fixed_navbar' => null,
-    'layout_fixed_footer' => null,
+    'layout_fixed_navbar' => true,
+    'layout_fixed_footer' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -250,106 +251,72 @@ return [
             // 'label'       => 4,
             // 'label_color' => 'success',
         ],
-        ['header' => 'ADMINISTRADOR'],
         [
-            'text' => 'Categorías',
-            'route'  => 'admin.categories.index',
-            'icon' => 'fab fa-fw fa-buffer',
-            'active' => ['admin/categories*'],
-            'can' => 'admin.categories.index',
-        ],
+            'text'    => 'Intranet',
+            'icon'    => 'fa-fw fas fa-graduation-cap',
+            'submenu' => [
+                // ['header' => 'ADMINISTRADOR'],
+                [
+                    'text' => 'Entidad',
+                    'route'  => 'admin.intranet.entidades.index',
+                    'icon' => 'fas fa-fw fa-hotel',
+                    'active' => ['admin/entidades.index'],
+                    // 'can' => 'admin.entidades.index',
+                ],
+            ]
+        ],        
         [
-            'text' => 'Etiquetas',
-            'route'  => 'admin.tags.index',
-            'icon' => 'fa-fw far fa-bookmark',
-            'active' => ['admin/tags*'],
-            'can'   => 'admin.tags.index',
-        ],
-        [
-            'text' => 'Servicios',
-            'route'  => 'admin.services.index',
-            'icon' => 'fa-fw fas fa-clipboard-list',
-            'active' => ['admin/services*'],
-            'can'   => 'admin.services.index',
-        ],
-        ['header' => 'OPCIONES DE LA WEB'],
-        [
-            'text' => 'Lista de Portadas',
-            'route'  => 'admin.portadas.index',
-            'icon' => 'fa-fw fas fa-image',
-            'active' => ['admin/portadas*'],
-            'can'   => 'admin.portadas.index',
-        ],
-        ['header' => 'OPCIONES DE NOTICIAS'],
-        [
-            'text' => 'Lista de Noticias',
-            'route'  => 'admin.noticias.index',
-            'icon' => 'fa-fw fas fa-clipboard',
-            'active' => ['admin/noticias'],
-            'can'   => 'admin.noticias.index',
-        ],
-        [
-            'text' => 'Crear Noticia',
-            'route'  => 'admin.noticias.create',
-            'icon' => 'fa-fw fas fa-file',
-            'active' => ['admin/noticias/create'],
-            'can'   => 'admin.noticias.create',
+            'text'    => 'Pagina web',
+            'icon'    => 'fa-fw fas fa-globe',
+            'submenu' => [
+                ['header' => 'ADMINISTRADOR'],
+                [
+                    'text' => 'Categorías',
+                    'route'  => 'admin.categories.index',
+                    'icon' => 'fab fa-fw fa-buffer',
+                    'active' => ['admin/categories*'],
+                    'can' => 'admin.categories.index',
+                ],
+                [
+                    'text' => 'Etiquetas',
+                    'route'  => 'admin.tags.index',
+                    'icon' => 'fa-fw far fa-bookmark',
+                    'active' => ['admin/tags*'],
+                    'can'   => 'admin.tags.index',
+                ],
+                [
+                    'text' => 'Servicios',
+                    'route'  => 'admin.services.index',
+                    'icon' => 'fa-fw fas fa-clipboard-list',
+                    'active' => ['admin/services*'],
+                    'can'   => 'admin.services.index',
+                ],
+                ['header' => 'OPCIONES DE LA WEB'],
+                [
+                    'text' => 'Lista de Portadas',
+                    'route'  => 'admin.portadas.index',
+                    'icon' => 'fa-fw fas fa-image',
+                    'active' => ['admin/portadas*'],
+                    'can'   => 'admin.portadas.index',
+                ],
+                ['header' => 'OPCIONES DE NOTICIAS'],
+                [
+                    'text' => 'Lista de Noticias',
+                    'route'  => 'admin.noticias.index',
+                    'icon' => 'fa-fw fas fa-clipboard',
+                    'active' => ['admin/noticias'],
+                    'can'   => 'admin.noticias.index',
+                ],
+                [
+                    'text' => 'Crear Noticia',
+                    'route'  => 'admin.noticias.create',
+                    'icon' => 'fa-fw fas fa-file',
+                    'active' => ['admin/noticias/create'],
+                    'can'   => 'admin.noticias.create',
+                ],
+            ],
         ],
         
-        // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //     ],
-        // ],
-        // ['header' => 'labels'],
-        // [
-        //     'text'       => 'important',
-        //     'icon_color' => 'red',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'warning',
-        //     'icon_color' => 'yellow',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'information',
-        //     'icon_color' => 'cyan',
-        //     'url'        => '#',
-        // ],
     ],
 
     /*
