@@ -97,7 +97,7 @@ class User extends Authenticatable
     }
 
     public function adminlte_image(){
-        return 'http://esar.test/img/home/logo-esar.png';
+        return 'http://esar.edu.pe/img/home/logo-esar.png';
     }
 
 }
