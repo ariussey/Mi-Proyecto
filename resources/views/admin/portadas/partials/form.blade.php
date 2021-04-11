@@ -87,6 +87,9 @@
             <p class="col-6 px-4" style="background-color: #ffffff" id="demo">Sin Color</p>
             @endif --}}
         </div>
+        @error('color')
+            <small class="text-danger">{{$message}}</small>
+        @enderror
     </div>
 </div>
 

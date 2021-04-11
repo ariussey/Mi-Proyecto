@@ -48,23 +48,38 @@ class PortadaRequest extends FormRequest
             $rules['title'] = 'required|unique:portadas,title,'.$portada->id;
             $rules['slug'] = 'required|unique:portadas,slug,'.$portada->id;
             $rules['portada_categoria_id'] = 'required|unique:portadas,portada_categoria_id,'.$portada->id;
-            
+
+            if($this->status == 2){
+
+                $rules = array_merge($rules, [
+                    'description' => 'required',
+                    'color' => 'required'
+                ]);
+                if(!$portada->image){
+                    $rules = array_merge($rules, [
+                        'file' => 'required',
+                        // 'file' => 'image'
+                    ]);
+                }
+    
+            }
         }
 
 
-        if($this->status == 2){
+        else {
+                if($this->status == 2){
+                    $rules = array_merge($rules, [
+                        'file' => 'required',
+                        // 'file' => 'image'
+                    ]);
 
-            $rules = array_merge($rules, [
-                'description' => 'required',
-                'color' => 'required'
-            ]);
-            if(!$portada->image){
                 $rules = array_merge($rules, [
-                    'file' => 'required',
-                    // 'file' => 'image'
+                    'description' => 'required',
+                    'color' => 'required'
                 ]);
-            }
+                
 
+            }
         }
         return $rules;
 

@@ -60,7 +60,7 @@ class PortadaController extends Controller
 
         }
 
-        return redirect()->route('admin.portadas.edit', $portada);
+        return redirect()->route('admin.portadas.edit', $portada)->with('info', 'La portada se creó correctamente.');;
     }
 
     /**
