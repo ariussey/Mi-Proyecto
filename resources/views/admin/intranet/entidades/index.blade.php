@@ -19,11 +19,11 @@
 
     {{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    {{-- <style>
+    <style>
         .jetstream-modal{
             z-index: 9999;
         }
-    </style> --}}
+    </style>
 @stop
 
 @section('js')
