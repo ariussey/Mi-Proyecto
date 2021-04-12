@@ -263,6 +263,13 @@ return [
                     'active' => ['admin/entidades.index'],
                     // 'can' => 'admin.entidades.index',
                 ],
+                [
+                    'text' => 'Horarios',
+                    'route'  => 'admin.intranet.horarios.index',
+                    'icon' => 'fa-fw far fa-clock',
+                    'active' => ['admin/horarios.index'],
+                    // 'can' => 'admin.entidades.index',
+                ],
             ]
         ],        
         [

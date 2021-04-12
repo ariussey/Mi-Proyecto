@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Horario;
 use App\Models\Infoweb;
 use App\Models\Navbar;
 use App\Models\Noticia;
@@ -48,6 +49,7 @@ class DatabaseSeeder extends Seeder
         Infoweb::factory(1)->create();
         Navbar::factory(4)->create();
         Page::factory(4)->create();
+        Horario::factory(10)->create();
 
         $this->call(PortadaCategoriaSeeder::class);
         //Portada_categoria::factory(2)->create();

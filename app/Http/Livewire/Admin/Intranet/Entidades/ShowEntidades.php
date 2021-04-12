@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Intranet\Entidades;
 
 use App\Models\Entidade;
 use Livewire\Component;
+use Illuminate\Support\Facades\Http;
 
 class ShowEntidades extends Component
 {
@@ -47,6 +48,9 @@ class ShowEntidades extends Component
     }
 
     public function index(){
+        // $uss = HTTP::get('https://aulavirtual.esar.edu.pe/webservice/rest/server.php?wstoken=0f30a2873cbc37b9f22dcd1a4660e72a&wsfunction=core_user_get_users&moodlewsrestformat=json');
+
+        // $usuarioArray = $uss->json();
         return view('admin.intranet.entidades.index');
     }
 

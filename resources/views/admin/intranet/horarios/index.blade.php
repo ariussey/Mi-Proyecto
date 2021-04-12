@@ -4,12 +4,12 @@
 @section('title', 'Intranet')
 
 @section('content_header')
-    <h1>Regitro de Entidades</h1>
+    <h1>Regitro de Horarios</h1>
 @stop
 
 @section('content')
     
-    @livewire('admin.intranet.entidades.show-entidades')
+    @livewire('admin.intranet.horarios.show-horarios')
 
 
 @stop

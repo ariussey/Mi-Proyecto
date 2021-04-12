@@ -77,8 +77,6 @@ class PortadaRequest extends FormRequest
                     'description' => 'required',
                     'color' => 'required'
                 ]);
-                
-
             }
         }
         return $rules;

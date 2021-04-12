@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\administradorController;
 use App\Http\Livewire\Admin\Intranet\Entidades\ShowEntidades;
+use App\Http\Livewire\Admin\Intranet\Horarios\ShowHorarios;
 
 Route::get('', [HomeController::class,'index'])->name('admin.home');
 
@@ -30,6 +31,8 @@ Route::resource('portadas/categorias', Portada_categoriaController::class)->name
 Route::resource('portadas', PortadaController::class)->names('admin.portadas');
 
 Route::get('intranet/entidades', [ShowEntidades::class, 'index'])->name('admin.intranet.entidades.index');
+
+Route::get('intranet/horarios', [ShowHorarios::class, 'index'])->name('admin.intranet.horarios.index');
 
 
 

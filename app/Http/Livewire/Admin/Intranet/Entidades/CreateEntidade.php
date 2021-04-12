@@ -19,7 +19,7 @@ class CreateEntidade extends Component
 
         $this->reset(['open', 'nombre' ,'estado']);
         
-        $this->emit('render');
+        $this->emitTo('admin.intranet.entidades.show-entidades','render');
         $this->emit('alerta', 'El registro se agregó correctamente!');
     }
 
