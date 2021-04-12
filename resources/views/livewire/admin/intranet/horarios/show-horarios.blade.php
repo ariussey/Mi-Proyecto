@@ -144,7 +144,7 @@
                                 </td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <span class="font-medium"><x-jet-danger-button href="{{$horario->enlace}}" class="ml-4">Enlace Ms Teams</x-jet-danger-button></span>
+                                        <span class="font-medium"><a class="text-white px-4 py-1 w-auto h-10 bg-green-600 rounded-full hover:bg-green-700 active:shadow-sm mouse shadow-sm transition ease-in duration-200 focus:outline-none" href="{{$horario->enlace}}">Enlace Ms Teams</a></span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-left">
