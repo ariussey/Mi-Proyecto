@@ -30,7 +30,7 @@ class CreateHorario extends Component
         Horario::create([
             'dia' => $this-> dia,
             'hora_inicio' => $this-> hora_inicio,
-            'hora_fin' => $this-> hora_inicio,
+            'hora_fin' => $this-> hora_fin,
             'enlace' => $this-> enlace,
             'id_moodle' => $this-> id_moodle
         ]);
