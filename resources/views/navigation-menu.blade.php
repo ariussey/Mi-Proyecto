@@ -33,7 +33,7 @@
     ];
 @endphp
 
-<nav x-data="{ open: false }" class="bg-white">
+<nav x-data="{ open: false }" class="bg-white sticky top-0">
     <!-- Primary Navigation Menu -->
     <div class="container">
         <div class="flex justify-between h-16 my-2">
