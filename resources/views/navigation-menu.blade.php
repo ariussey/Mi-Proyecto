@@ -181,7 +181,7 @@
             </div>
         </div>
     </div>
-    <header class="bg-white shadow border-t border-gray-200">
+    <header class="bg-green-500 shadow border-t border-gray-200">
         <div class="container">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{-- {{ __('Dashboard xd ') }} --}}

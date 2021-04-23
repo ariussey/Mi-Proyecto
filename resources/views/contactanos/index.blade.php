@@ -17,7 +17,15 @@
             </div>
         @endif
     {{-- PORTADA --}}
-    @include('nosotros.partials.portada')
+    <section class="sld">
+        <div class="slide">
+            <ul>
+                @foreach ($portadas as $portada)
+                    <x-portada-slide :portada="$portada"/>
+                @endforeach
+            </ul>
+        </div>
+    </section>
 
     <section class="py-4 degrade-nosotros">
         <small class="m-4 text-sm text-white"><a class="hover:font-bold hover:text-lg" href="{{route('home')}}">Inicio</a> <i class="fas fa-angle-right px-4"></i> <b><a href="{{route('contactanos.index')}}">Contáctanos</a></b></small>
@@ -114,4 +122,5 @@
             </div>   
         </div>
     </section>
+    <x-footer />
 </x-app-layout>
